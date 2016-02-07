@@ -9,7 +9,7 @@ namespace Insya.Localization
     internal class LocalizationStartup
     {
         /// <summary>
-        /// Localization Culture (ex: tr-TR)
+        /// Localization Culture (ex: ar-AR)
         /// </summary>
         /// <returns></returns>
         private string Culture { get; set; }
@@ -25,7 +25,7 @@ namespace Insya.Localization
 
         public void ReadCookie()
         {
-            Culture = string.Format("{0}", Language.en_US);
+            Culture = string.Format("{0}", Language.ar_AR);
 
             var cookieLanguage = HttpContext.Current.Request.Cookies["CacheLang"];
 
@@ -37,7 +37,7 @@ namespace Insya.Localization
             {
                 var httpCookie = HttpContext.Current.Response.Cookies["CacheLang"];
                 if (httpCookie != null)
-                    httpCookie.Value = Language.en_US.ToString();
+                    httpCookie.Value = Language.ar_AR.ToString();
 
                 if (cookieLanguage != null)
                     Culture = string.Format("{0}", cookieLanguage.Value);
@@ -97,7 +97,7 @@ namespace Insya.Localization
                 return value;
             }
 
-            return lang.en_US;
+            return lang.ar_AR;
         }
 
         // ToDo this
