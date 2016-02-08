@@ -9,7 +9,7 @@ namespace Insya.Localization
     internal class LocalizationStartup
     {
         /// <summary>
-        /// Localization Culture (ex: ar-AR)
+        /// Localization Culture (ar-AR)
         /// </summary>
         /// <returns></returns>
         private string Culture { get; set; }
