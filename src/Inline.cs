@@ -7,6 +7,11 @@ namespace Insya.Localization
 {
     public class Inline : IInline
     {
+        /// <summary>
+        /// Arabic
+        /// </summary>
+        /// <returns></returns>
+        public string ar_AR { get; set; }
 
         /// <summary>
         /// English(United States)
@@ -89,6 +94,7 @@ namespace Insya.Localization
         /// <summary>
         /// Inline localization (xml does not have to define)
         /// </summary>
+        /// <param name="ar"></param>
         /// <param name="en"></param>
         /// <param name="tr"></param>
         /// <param name="es"></param>
@@ -102,8 +108,9 @@ namespace Insya.Localization
         /// <param name="ptBR"></param>
         /// <param name="ruRU"></param>
         /// <param name="zhCN"></param>
-        public Inline(string en = "", string tr = "", string es = "", string de = "", string fr = "", string it = "", string enCA = "", string enGB = "", string esMX = "", string jaJP = "", string ptBR = "", string ruRU = "", string zhCN = "")
+        public Inline(string ar = "", string en = "", string tr = "", string es = "", string de = "", string fr = "", string it = "", string enCA = "", string enGB = "", string esMX = "", string jaJP = "", string ptBR = "", string ruRU = "", string zhCN = "")
         {
+            ar_AR = ar;
             en_US = en;
             tr_TR = tr;
             de_DE = de;
